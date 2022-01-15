@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+    
+    :root{
+        --Moderateviolet: hsl(263, 55%, 52%);
+        --vdgb: hsl(217, 19%, 35%);
+        --vdbb: hsl(219, 29%, 14%);
+        --White: hsl(0, 0%, 100%);
+        --Lightgray: hsl(0, 0%, 81%);
+        --Lightgb: hsl(210, 46%, 95%);;    
+    }
+    
+    body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: var(--Lightgray);          
+    }    
+
+    main{
+        width: 78vw;
+        font-size: 13px;  
+        display: grid;
+        grid-template-columns: repeat(4, 18vw);
+        grid-template-rows: repeat(2, auto);  
+        grid-template-areas:"test1 test1 test2 test3" 
+                            "test4 test5 test5 test3";    
+        column-gap: 1.875em;
+        row-gap: 1.437em;
+        margin: 10em auto;
+    }
+        header{
+            display: flex;
+            align-items: center;           
+        }
+        #dan, #jona, #kira, #jean, #pat{
+            border-radius: 50%;
+            border: 1px solid var(--Lightgb);          
+        }
+        .user, .userkwjh {
+            padding: 0em 0em 0em 1em;
+        }
+        
+        .user::first-line{
+            color: var(--Lightgb);
+        }
+        .user span{
+            color: var(--Lightgb);
+            opacity: 50%;
+        }
+
+        .userkwjh::first-line{
+            color: var(--vdgb);
+        }
+        .userkwjh span{
+            color: var(--vdgb);
+            opacity: 50%;
+        }
+    .test1{
+        grid-area: test1;
+        background-image: url('./images/bg-pattern-quotation.svg');
+        background-color: var(--Moderateviolet);
+        background-position: 81% 0%;
+        background-repeat: no-repeat;
+        padding: 2em;
+        border-radius: 1em;
+    }
+    #dan-review-1, #jona-reviw-1, #pat-review-1{
+        color: var(--Lightgb);
+        font-weight: 600;
+        font-size: 1.5em;
+        padding: .5em 0em 1em 0em;
+    }
+    #dan-review-2, #jona-review-2,#pat-review-2{
+        color: var(--Lightgb);
+        opacity: 70%;       
+    }
+
+    #kira-review-1, #jean-review-1{
+        color: var(--vdgb);
+        font-weight: 600;
+        font-size: 1.5em;
+        padding: .5em 0em 1em 0em;
+    }
+    #kira-review-2, #jean-review-2{
+        color: var(--vdgb);
+        opacity: 70%;
+    }
+
+    .test2{ 
+        grid-area: test2;
+        background: var(--vdgb);
+        padding: 2em;
+        border-radius: 1em;
+
+    }
+
+    .test3{
+        grid-area: test3;
+        background: var(--White);
+        padding: 2em;
+        border-radius: 1em;
+       
+        
+    }
+
+    .test4{
+        grid-area: test4;
+        background: var(--White);
+        padding: 2em;
+        border-radius: 1em;
+        
+    }
+
+    .test5{
+        grid-area: test5;
+        background: var(--vdbb);
+        padding: 2em;
+        border-radius: 1em;
+        
+    }
+    
+     
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    @media screen and (max-width: 600px) {
+
+        main{
+            grid-template-columns: 80vw;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas:"test1"
+                                "test2"
+                                "test4"
+                                "test5"
+                                "test3"
+        }
+    }
